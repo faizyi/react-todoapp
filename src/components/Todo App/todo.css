@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(129, 0, 250);
+}
+
+.todo-container .header {
+    max-width: 500px;
+    background-color: rgb(52, 8, 94);
+    box-shadow: 0px 0px 5px black;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: flex;
+    padding: 20px;
+    transition: .3s ease;
+}
+
+.header h1 {
+    color: white;
+}
+
+.todo-container .todo-content {
+    /* height: 460px; */
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: rgb(52, 8, 94);
+    border-radius: 5px;
+    padding: 28px 0;
+    box-shadow: 0px 0px 5px black;
+    transition: .3s ease;
+}
+
+.todo-content .todo-input {
+    display: flex;
+}
+
+.todo-input .todoInput {
+    height: 52px;
+    width: 85%;
+    padding: 0 25px;
+    position: relative;
+    margin-left: 40px;
+    display: flex;
+    border: 1px solid rgb(129, 14, 236);
+    border-radius: 5px;
+}
+
+.todo-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: .2s ease;
+    background-color: transparent;
+    color: white;
+}
+
+.todo-input input::placeholder {
+    color: rgb(209, 198, 198);
+}
+
+.todo-input .add-btn {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.add-btn button {
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid rgb(81, 5, 151);
+    outline: none;
+    background-color: transparent;
+    color: rgb(209, 198, 198);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn button:hover {
+    border: 1px solid rgb(134, 4, 255);
+    color: white;
+}
+
+.todo-content .clear-btn {
+    display: flex;
+    justify-content: right;
+}
+
+.todo-input .clear-btn {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+
+.clear-btn button {
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid rgb(81, 5, 151);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(209, 198, 198);
+    outline: none;
+}
+
+.clear-btn button:hover {
+    border: 1px solid rgb(134, 4, 255);
+    color: white;
+}
+
+.todo-container .todo-content .hr {
+    margin-top: 30px;
+    border-color: rgb(129, 14, 236);
+}
+
+.todo-container .todo-content .todo-ul {
+    margin: 28px 35px;
+    overflow-y: auto;
+    max-height: 310px;
+    padding-right: 10px;
+}
+
+.todo-ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+.todo-ul::-webkit-scrollbar-track {
+    /* background: #cec9c9; */
+    border-radius: 25px;
+}
+
+.todo-ul::-webkit-scrollbar-thumb {
+    background: rgb(129, 0, 250);
+    border-radius: 25px;
+}
+
+.todo-ul .task {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding: 10px;
+    /* padding-bottom: 16px; */
+    /* border: 1px solid rgb(129, 14, 236); */
+    cursor: auto;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color:  rgb(129, 0, 250);
+}
+
+.todo-ul .task p {
+    font-size: 18px;
+    width: 650px;
+    color: white;
+}
+.todo-ul .btn-setting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.todo-ul .todo-setting button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    color:  rgb(209, 198, 198);
+}
+.todo-ul .todo-setting button:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* Styles for small tablets go here */
+    .todo-container .header{
+        max-width: 650px;
+        padding: 20px;
+    }
+    .todo-container .todo-content{
+        max-width: 650px;
+    }
+    .todo-input .todoInput{
+        width: 430px;
+    }
+    .todo-container .todo-content .todo-ul {
+        max-height: 750px;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    .todo-container .header{
+        max-width: 350px;
+        padding: 20px;
+    }
+    .todo-container .todo-content{
+        max-width: 350px;
+    }
+    .todo-input .todoInput{
+        height: 52px;
+        width: 150px;
+        padding: 0 15px;
+        margin-left: 30px;
+    }
+    .todo-input input {
+        font-size: 15px;        
+    }
+    .todo-container .todo-content .todo-ul {
+        max-height: 750px;
+    }
+    .todo-ul .task {
+        width: 100%;
+        margin-left: 5px;
+    }
+    .todo-ul .task p {
+        font-size: 17px;
+    }
+    .todo-container .todo-content .todo-ul {
+        max-height: 350px;
+    }
+  }
+  
+  @media screen and (min-width: 100px) and (max-width: 321px){
+    .todo-container .header{
+        max-width: 290px;
+        padding: 20px;
+    }
+    .todo-container .todo-content{
+        max-width: 290px;
+    }
+    .todo-input .todoInput{
+        width: 100px;
+    }
+    .todo-container .todo-content .todo-ul {
+        max-height: 320px;
+    }
+}
